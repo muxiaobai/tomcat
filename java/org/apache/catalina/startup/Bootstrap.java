@@ -434,6 +434,10 @@ public final class Bootstrap {
      * @param args Command line arguments to be processed
      */
     public static void main(String args[]) {
+//        System.setProperty("catalina.home","E:/workspace/git/tomcat/home");
+//        System.setProperty("catalina.base","E:/workspace/git/tomcat/home");
+//        System.setProperty("java.util.logging.manager","org.apache.juli.ClassLoaderLogManager");
+//        System.setProperty("java.util.logging.config.file","E:/workspace/git/tomcat/home/conf/logging.properties");
 
         synchronized (daemonLock) {
             if (daemon == null) {
