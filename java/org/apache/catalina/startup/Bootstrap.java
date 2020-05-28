@@ -427,18 +427,26 @@ public final class Bootstrap {
     }
 
 
+
     /**
      * Main method and entry point when starting Tomcat via the provided
      * scripts.
      *
+     * -Dcatalina.home=E:/workspace/git/tomcat
+     * -Dcatalina.base=E:/workspace/git/tomcat
+     * -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+     * -Djava.util.logging.config.file=E:/workspace/git/tomcat/conf/logging.properties
+     *
      * @param args Command line arguments to be processed
      */
     public static void main(String args[]) {
-//        System.setProperty("catalina.home","E:/workspace/git/tomcat/home");
-//        System.setProperty("catalina.base","E:/workspace/git/tomcat/home");
+//        System.setProperty("catalina.home","E:/workspace/git/tomcat");
+//        System.setProperty("catalina.base","E:/workspace/git/tomcat");
 //        System.setProperty("java.util.logging.manager","org.apache.juli.ClassLoaderLogManager");
-//        System.setProperty("java.util.logging.config.file","E:/workspace/git/tomcat/home/conf/logging.properties");
-
+//        System.setProperty("java.util.logging.config.file","E:/workspace/git/tomcat/conf/logging.properties");
+//        System.setProperty("java.util.logging.config.file",
+//                new File(System.getProperty("tomcat.test.basedir"),
+//                        "conf/logging.properties").toString());
         synchronized (daemonLock) {
             if (daemon == null) {
                 // Don't set daemon until init() has completed
